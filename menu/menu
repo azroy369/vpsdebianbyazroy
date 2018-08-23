@@ -16,7 +16,7 @@ exp="$(chage -l $uname | grep "Account expires" | awk -F": " '{print $2}')"
 echo -e "$pass\n$pass\n"|passwd $uname &> /dev/null
 echo -e ""
 echo -e "Г·Г·Г·Г·Г·Г·Г·Г·Г·Г·Г·Г·Г·Г·Г·Г·Г·Г·Г·Г·Г·Г·Г·Г·Г·Г·Г·Г·Г·Г·Г·Г·Г·Г·Г·Г·Г·Г·Г·Г·Г·" 
-echo -e " Informasi Akun Baru SSH Server Premium" 
+echo -e " Information Account Baru SSH Server Premium" 
 echo -e "========================================="
 echo -e "     Host/IP: $myip" 
 echo -e "     Username: $uname" 
