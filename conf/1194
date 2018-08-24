@@ -11,7 +11,7 @@ key /etc/openvpn/keys/server.key
 plugin /usr/lib/openvpn/openvpn-auth-pam.so /etc/pam.d/login
 client-cert-not-required
 username-as-common-name
-server 10.8.0.0 255.255.255.0
+server 192.168.100.0 255.255.255.0
 ifconfig-pool-persist ipp.txt
 push "redirect-gateway def1"
 push "dhcp-option DNS 1.1.1.1"
@@ -19,7 +19,8 @@ push "dhcp-option DNS 1.0.0.1"
 push "route-method exe"
 push "route-delay 2"
 keepalive 5 30
-cipher none
+cipher AES-256-CBC
+auth SHA256
 comp-lzo
 persist-key
 persist-tun
